@@ -1,53 +1,68 @@
 ---
-name: wf-local-video-oral-storyboard
+name: wf-local-video-review
 description: >-
-  探店短视频编导 的「口播文案+分镜」工作流：脚本转口播逐字稿 → 分镜表（镜头/时长/画面）。触发方式：人工（随 W2 联动）。
-  当用户要完成「口播文案+分镜」这件事、或触发了上述条件时使用。
+  探店短视频编导 的「发布日历与复盘」工作流：汇总上周发布数据 → 识别高完播选题方向 → 排本周日历。触发方式：定时（每周一）。
+  当用户要完成「发布日历与复盘」这件事、或触发了上述条件时使用。
 license: Proprietary
+compatibility: >-
+  需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
+  跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:
   author: PLATFORM
   version: "1.0.0"
   standard: agent-skills/v1
+  library: agent-skills-library
   layer: L2-workflow
   owner: de_local_store_video_director
-  complexity: S
-  phase: P0
+  repo: de-local-store-video-director
+  visibility: private_to_employee
+  delivery: employee
+  complexity: M（需读取平台数据）
+  phase: P1
   source: library
 ---
 
-# 口播文案+分镜
+# 发布日历与复盘
 
-> 归属：**探店短视频编导**（`de-local-store-video-director`）　触发：人工（随 W2 联动）　
-> 复杂度 S　阶段 P0
+> 归属：**探店短视频编导**（`de-local-store-video-director`）　触发：定时（每周一）　
+> 复杂度 M（需读取平台数据）　阶段 P1
 
 ## 一、这条工作流解决什么
 
-脚本转口播逐字稿 → 分镜表（镜头/时长/画面）
+汇总上周发布数据 → 识别高完播选题方向 → 排本周日历
 
-**业务收益**：同上，打包计入
+**业务收益**：解决"不知道发什么"的持续枯竭问题
 
 ## 二、调用的 SKILL（必填列，逐条锁定版本）
 
 | 技能名 | slug | 来源仓 | 版本 |
 |---|---|---|---|
-| `脚本结构生成` | `script-structure` | core | v1.0.0 |
+| `本地热点监控` | `local-trend-monitor` | 本仓 | v1.0.0 |
+| `平台格式适配` | `platform-format-adapter` | core | v1.0.0 |
 
 > 公共技能来自 `agent-skills-core@1.0.0`，本仓库只做外部依赖引用，
 > **不内联复制**其正文——这是三层仓库体系的硬规则，避免同一能力多份副本各自漂移。
 
 ## 三、执行步骤（每步四要素齐备）
 
-### 步骤 1：脚本转口播逐字稿
+### 步骤 1：汇总上周发布数据
 
-- **做**：脚本转口播逐字稿
+- **做**：汇总上周发布数据
 - **输入来源**：用户提供的原始材料（工作流第 1 步没有「上一步」）/ 本员工知识库 `kb/` / 连接器只读数据；三者皆空时必须停在 G1 闸门
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 
-### 步骤 2：分镜表（镜头/时长/画面）
+### 步骤 2：识别高完播选题方向
 
-- **做**：分镜表（镜头/时长/画面）
+- **做**：识别高完播选题方向
 - **输入来源**：步骤 1 的产出 / 本员工知识库 `kb/` / 连接器只读数据
+- **依据与结论**：把本步结论对应到具体输入项
+- **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
+
+### 步骤 3：排本周日历
+
+- **做**：排本周日历
+- **输入来源**：步骤 2 的产出 / 本员工知识库 `kb/` / 连接器只读数据
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 

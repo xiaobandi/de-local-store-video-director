@@ -1,0 +1,15 @@
+{
+  "name": "wf-local-video-oral-storyboard",
+  "title": "口播文案+分镜",
+  "kind": "workflow",
+  "owner": "de-local-store-video-director",
+  "complexity": "S",
+  "phase": "P0",
+  "one_liner": "脚本转口播逐字稿 → 分镜表（镜头/时长/画面）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "wf-local-video-review",
+  "title": "发布日历与复盘",
+  "kind": "workflow",
+  "owner": "de-local-store-video-director",
+  "complexity": "M（需读取平台数据）",
+  "phase": "P1",
+  "one_liner": "汇总上周发布数据 → 识别高完播选题方向 → 排本周日历",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

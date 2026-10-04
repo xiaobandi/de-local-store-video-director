@@ -1,0 +1,15 @@
+{
+  "name": "aigc-labeling-compliance",
+  "title": "AIGC 内容标识合规",
+  "kind": "skill",
+  "owner": "de-local-store-video-director",
+  "complexity": "S",
+  "phase": "P0",
+  "one_liner": "生成内容合规自查与标识提示（文案 → 合规检查+标识建议）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

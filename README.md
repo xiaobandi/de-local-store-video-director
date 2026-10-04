@@ -7,6 +7,19 @@
 
 ![架构](docs/images/architecture.svg)
 
+## 效果（真实执行）
+
+![真实效果](workflows/wf-local-video-cover-title/docs/images/00-effect.png)
+
+*上图为**真实效果对比**，不是示意图：左栏是输入材料与要求，右栏是该次执行的产出原文，
+两栏取自同一次真实执行记录。*
+
+- 完整台账：[`reports/real-run/wf-local-video-cover-title.md`](reports/real-run/wf-local-video-cover-title.md)
+- 录屏与终端回放：[`workflows/wf-local-video-cover-title/docs/images/`](workflows/wf-local-video-cover-title/docs/images/)（`08-demo-run.gif` / `08-demo-run.mp4` / `04-terminal-run.png`）
+- 使用示例：[`workflows/wf-local-video-cover-title/docs/使用示例.md`](workflows/wf-local-video-cover-title/docs/使用示例.md)
+> 实测判定：**通过**　·　可用度 3/5　·　编造数字 0 处　·　红线命中 3 次 / 拦截 3 次
+
+
 **一句话**：无内容团队的餐饮/美业/健身门店老板（71% 无专业内容团队，据 R4 调研）
 
 ---
@@ -100,7 +113,7 @@ de-local-store-video-director/
 
 | 项 | 值 |
 |---|---|
-| 技能文件数 | 110 |
+| 技能文件数 | 160 |
 | 多场景用例数 | 205 |
 | 用例通过 | 205 |
 | 验收结论 | ✅ 通过 |

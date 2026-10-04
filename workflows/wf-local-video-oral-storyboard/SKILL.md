@@ -1,30 +1,37 @@
 ---
-name: wf-local-video-script
+name: wf-local-video-oral-storyboard
 description: >-
-  探店短视频编导 的「探店脚本生成」工作流：素材解析 → 生成 60 秒脚本（钩子-展示-团购引导三段式）。触发方式：人工（老板投喂素材照片/语音描述）。
-  当用户要完成「探店脚本生成」这件事、或触发了上述条件时使用。
+  探店短视频编导 的「口播文案+分镜」工作流：脚本转口播逐字稿 → 分镜表（镜头/时长/画面）。触发方式：人工（随 W2 联动）。
+  当用户要完成「口播文案+分镜」这件事、或触发了上述条件时使用。
 license: Proprietary
+compatibility: >-
+  需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
+  跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:
   author: PLATFORM
   version: "1.0.0"
   standard: agent-skills/v1
+  library: agent-skills-library
   layer: L2-workflow
   owner: de_local_store_video_director
+  repo: de-local-store-video-director
+  visibility: private_to_employee
+  delivery: employee
   complexity: S
   phase: P0
   source: library
 ---
 
-# 探店脚本生成
+# 口播文案+分镜
 
-> 归属：**探店短视频编导**（`de-local-store-video-director`）　触发：人工（老板投喂素材照片/语音描述）　
+> 归属：**探店短视频编导**（`de-local-store-video-director`）　触发：人工（随 W2 联动）　
 > 复杂度 S　阶段 P0
 
 ## 一、这条工作流解决什么
 
-素材解析 → 生成 60 秒脚本（钩子-展示-团购引导三段式）
+脚本转口播逐字稿 → 分镜表（镜头/时长/画面）
 
-**业务收益**：外包单条脚本 200–500 元，月产 15 条 ≈ 省 3000 元+
+**业务收益**：同上，打包计入
 
 ## 二、调用的 SKILL（必填列，逐条锁定版本）
 
@@ -37,16 +44,16 @@ metadata:
 
 ## 三、执行步骤（每步四要素齐备）
 
-### 步骤 1：素材解析
+### 步骤 1：脚本转口播逐字稿
 
-- **做**：素材解析
+- **做**：脚本转口播逐字稿
 - **输入来源**：用户提供的原始材料（工作流第 1 步没有「上一步」）/ 本员工知识库 `kb/` / 连接器只读数据；三者皆空时必须停在 G1 闸门
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 
-### 步骤 2：生成 60 秒脚本（钩子-展示-团购引导三段式）
+### 步骤 2：分镜表（镜头/时长/画面）
 
-- **做**：生成 60 秒脚本（钩子-展示-团购引导三段式）
+- **做**：分镜表（镜头/时长/画面）
 - **输入来源**：步骤 1 的产出 / 本员工知识库 `kb/` / 连接器只读数据
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
