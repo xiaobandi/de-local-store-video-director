@@ -3,7 +3,7 @@ name: wf-local-video-hot-topic
 description: >-
   探店短视频编导 的「热点选题抓取」工作流：抓取本地同城热点/节气/平台话题榜 → 匹配门店品类 → 推送 3 个选题。触发方式：定时（每日 7:00）。
   当用户要完成「热点选题抓取」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。

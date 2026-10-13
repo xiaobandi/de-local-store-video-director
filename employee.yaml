@@ -17,7 +17,7 @@ metadata:
   - '**小红书**（目标老板聚集地，教程种草转化）'
   - '**抖音**（用产品产出的内容做自证营销）'
   - Coze 扣子商店
-  license: Proprietary
+  license: Apache-2.0
   version: 1.0.0
 spec:
   positioning: 门店的"编外内容总监"：每天给出拍什么、怎么拍、怎么挂团购的完整答案

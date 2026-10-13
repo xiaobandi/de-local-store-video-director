@@ -3,7 +3,7 @@ name: wf-local-video-script
 description: >-
   探店短视频编导 的「探店脚本生成」工作流：素材解析 → 生成 60 秒脚本（钩子-展示-团购引导三段式）。触发方式：人工（老板投喂素材照片/语音描述）。
   当用户要完成「探店脚本生成」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
