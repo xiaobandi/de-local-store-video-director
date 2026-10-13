@@ -5,6 +5,12 @@
 > **7.4.2 ①**　·　本地生活服务商家　·　阶段 **P0 首发**（ROI 最直白，决策者一眼算得过账）　·　
 > 复杂度 M（W5 需连接器，其余 S）　·　300–2000 元/月（本地商家愿为 AI 批量内容付 500–2000 元/月，据 R4 调研）；**代配置服务加成：500–1500 元/次**（卖点库灌入+账号授权代办+首周陪跑，可占总成交额的 30–50%，本群体付费意愿最强的增值服务）　·　定义卡 7.4.2 ①
 
+## 演示（真实执行录播）
+
+![演示](workflows/wf-local-video-cover-title/docs/images/08-demo-run.gif)
+
+*真实执行回放（GIF 自动循环，非摆拍）· [▶ 观看完整版 MP4](workflows/wf-local-video-cover-title/docs/images/08-demo-run.mp4) · 台账见 [`reports/real-run/wf-local-video-cover-title.md`](reports/real-run/wf-local-video-cover-title.md)*
+
 ![架构](docs/images/architecture.svg)
 
 ## 效果（真实执行）
@@ -58,6 +64,7 @@ python3 tests/run.py            # 先跑一遍自检，确认环境与契约都�
 
 ```text
 de-local-store-video-director/
+├── employee.md            # 人读定义卡（12 主字段 + 2 扩展组，由 employee.yaml 生成）
 ├── employee.yaml          # 机器契约（能力清单 + 依赖锁）
 ├── dependencies.yaml      # 对 core 的外部依赖（含版本）
 ├── persona/               # 运行提示词 / 边界 / KPI
